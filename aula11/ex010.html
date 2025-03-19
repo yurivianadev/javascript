@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        #caixasistema{
+            background-color: green;
+            height: 250px;
+            margin-bottom: 50px;
+        }
+        #caixapais{
+            background-color: rgba(4, 4, 249, 0.769);
+            height: 250px;
+        }
+        input{
+            width: 100px;
+        }
+        #inacionalidade{
+            width: 250px;
+        }
+        #botao{
+            width: 116px;
+        }
+        h1{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="caixasistema">
+        <h1>Sistema de Multas</h1>
+        Velocidade do carro<input type="number" name="txtvel" id="itxtvel">Km/h
+        <input type="button" value="Verificar" onclick="calcular()">
+        <div id="res">
+            Resultado
+        </div>
+    </div>
+
+    <div id="caixapais">
+        <h1>Nacionalidade</h1>
+        Informe seu País<input type="text" name="nacionalidade" id="inacionalidade">
+        <input type="button" value="Confirmar" id="botao" onclick="confirmar()">
+        <div id="resposta">Resultado</div>
+    </div>
+    <script>
+        
+        function calcular(){
+          var txtv = window.document.getElementById('itxtvel')
+          var res = window.document.getElementById('res')
+          var vel = Number(txtv.value)
+          res.innerHTML = `<p>Sua velocidade atual é <strong>${vel}Km/h</strong></p>`
+          if (vel > 60){
+            res.innerHTML += `<p>Voce esta<strong>MULTADO</strong> por excesso de velocidade</p>`
+          }
+          res.innerHTML += `<p>Dirija sempre com cinto de segurança</p>`
+        }
+
+        function confirmar(){
+           var txtpais = window.document.getElementById('inacionalidade')
+           var pais = String(txtpais.value)
+           
+           if (pais.toUpperCase() == 'BRASIL'){
+                resposta.innerHTML = `Você é Brasileiro!`
+           }else{
+                resposta.innerHTML = 'Você é Estrangeiro!'
+           }
+        }
+    </script>
+</body>
+</html>
