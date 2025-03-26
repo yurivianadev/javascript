@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Contador</h1>
+    </header>
+    <section>
+        <div id="formulario">
+           <form action="contar.php">
+                <label for="iinicio">Inicio</label>
+                <input type="number" name="inicio" id="iinicio" maxlength="7" required><br>
+                <label for="ifim">Fim</label>
+                <input type="number" name="fim" id="ifim" maxlength="7" required><br>
+                <label for="ipasso">Passo</label>
+                <input type="number" name="passo" id="ipasso" maxlength="7" required><br>
+                <input type="button" value="Contar" onclick="contar()">
+            </form>
+        </div>
+        <div id="resposta">
+            <p id="res">Preparando contagem...</p>
+        </div>
+    </section>
+    <footer>
+        <p>Feito por &copy;<a href="https://github.com/yurivianadev" target="_blank">Yuri Ferreira</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
