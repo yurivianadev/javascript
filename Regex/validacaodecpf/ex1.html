@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Cep</title>
+    <style>
+        body{
+            background-color: rgba(0, 255, 255, 0.241);
+            text-align: center;
+        }
+        #botao{background-color: orangered; color: white;}
+        #botao:hover{background-color: green}
+    </style>
+</head>
+<body>
+    <h1>Validação de CPF Regex</h1>
+    <div>
+        <form action="">
+            <label for="icpf">Digite o número de CPF ou Email</label>
+            <input type="text" name="cpf" id="icpf" maxlength="254">
+            <input id="botao" type="button" value="enviar" onclick="enviar()">
+        </form>
+    </div>
+    <div id="res">vai aprecer a resposta</div>
+    <script src="validarcep.js"></script>
+</body>
+</html>
